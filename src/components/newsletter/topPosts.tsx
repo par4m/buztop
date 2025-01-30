@@ -13,10 +13,10 @@ const TopPosts = async () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold tracking-tigher sm:text-3xl md:text-4xl  text-center mb-6">
+      <h1 className="text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-center mb-6">
         Top Posts
       </h1>
-      <div className="grid grid-cols-3 container mx-auto gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto px-4">
         {posts.docs.map((post: Post) => {
           const root = post.postBody.root
           const firstParagraph = root.children.find(
