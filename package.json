@@ -5,15 +5,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "build": "next build",
     "ci": "payload migrate && pnpm build",
-    "dev": "payload migrate && cross-env NODE_OPTIONS=--no-deprecation next dev",
-    "devsafe": "rm -rf .next && payload migrate && cross-env NODE_OPTIONS=--no-deprecation next dev",
-    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
-    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
-    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "dev": "next dev",
+    "generate:types": "payload generate:types",
+    "lint": "next lint",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
-    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+    "start": "next start"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.10.4",
