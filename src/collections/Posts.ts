@@ -1,3 +1,4 @@
+import afterPostCreate from '@/hooks/afterPostCreate'
 import type { CollectionConfig } from 'payload'
 
 export const Posts: CollectionConfig = {
@@ -17,6 +18,9 @@ export const Posts: CollectionConfig = {
       required: true,
     },
   ],
+  hooks: {
+    afterOperation: [afterPostCreate],
+  },
 
   // upload: true,
 }
